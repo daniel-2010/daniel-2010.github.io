@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Desenvolvedor Web Freelancer — Sites e sistemas modernos, rápidos e prontos para crescer." />
+  <title>Daniel | Desenvolvedor Web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">daniel<span>.dev</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#contato" class="btn-nav">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+        <span class="badge-pulse"></span>
+        Disponível para novos projetos
+      </div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        Desenvolvedor Web<br />
+        &amp; <span class="gradient-text">Criador de Soluções</span><br />
+        Digitais
+      </h1>
+
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="350">
+        Transformo ideias em sistemas e sites rápidos, funcionais e prontos para crescer.
+      </p>
+
+      <div class="hero-typing" data-aos="fade-up" data-aos-delay="450">
+        <span class="typing-prompt">$ </span><span id="typing-text"></span><span class="cursor">▌</span>
+      </div>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="580">
+        <a href="#contato" class="btn-primary">
+          <span>Falar comigo</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#projetos" class="btn-secondary">Ver projetos</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SOBRE ═══════════════════════ -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Sobre</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">O que eu faço</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="150">
+        Sou desenvolvedor web com foco em criar soluções digitais robustas — do front ao back,
+        do MVP ao produto escalável. Trabalho com clareza, qualidade e entrega real.
+      </p>
+
+      <div class="sobre-grid">
+        <div class="sobre-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="sobre-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Desenvolvimento de Sites</h3>
+          <p>Landing pages, portfólios e sites institucionais modernos, rápidos e otimizados para conversão.</p>
+        </div>
+
+        <div class="sobre-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="sobre-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Sistemas Web</h3>
+          <p>Painéis administrativos, plataformas SaaS e aplicações personalizadas para o seu negócio.</p>
+        </div>
+
+        <div class="sobre-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="sobre-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3>APIs &amp; Integrações</h3>
+          <p>Construção e integração de APIs RESTful, webhooks, gateways de pagamento e serviços externos.</p>
+        </div>
+
+        <div class="sobre-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="sobre-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Automações</h3>
+          <p>Automatize processos, relatórios e fluxos repetitivos com scripts e integrações inteligentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ TECNOLOGIAS ═══════════════════════ -->
+  <section class="tecnologias" id="tecnologias">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Stack</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Tecnologias</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="150">
+        Ferramentas que uso no dia a dia para construir soluções sólidas e escaláveis.
+      </p>
+
+      <div class="tech-grid">
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="tech-logo node-logo">
+            <span class="tech-abbr">N</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">Node.js</span>
+            <span class="tech-desc">Backend & APIs</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="180">
+          <div class="tech-logo php-logo">
+            <span class="tech-abbr">PHP</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">PHP / CI4</span>
+            <span class="tech-desc">CodeIgniter 4</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="260">
+          <div class="tech-logo mongo-logo">
+            <span class="tech-abbr">M</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">MongoDB</span>
+            <span class="tech-desc">NoSQL & docs</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="340">
+          <div class="tech-logo mysql-logo">
+            <span class="tech-abbr">SQL</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">MySQL</span>
+            <span class="tech-desc">Banco relacional</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="420">
+          <div class="tech-logo docker-logo">
+            <span class="tech-abbr">🐳</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">Docker</span>
+            <span class="tech-desc">Containers & deploy</span>
+          </div>
+        </div>
+
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="tech-logo aws-logo">
+            <span class="tech-abbr">AWS</span>
+          </div>
+          <div class="tech-info">
+            <span class="tech-name">AWS</span>
+            <span class="tech-desc">Cloud & infra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJETOS ═══════════════════════ -->
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Portfólio</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Projetos</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="150">
+        Alguns dos sistemas e produtos que já desenvolvi do zero.
+      </p>
+
+      <div class="projetos-grid">
+        <div class="projeto-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="projeto-bar">
+            <div class="projeto-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="projeto-tipo">Web App</span>
+          </div>
+          <div class="projeto-body">
+            <h3>SaaS de Gestão</h3>
+            <p>Plataforma completa de gestão para pequenas empresas com painel de controle, relatórios analíticos e controle de usuários por perfil.</p>
+            <div class="projeto-tags">
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+            </div>
+          </div>
+          <div class="projeto-footer">
+            <a href="#contato" class="projeto-link">Ver detalhes →</a>
+          </div>
+        </div>
+
+        <div class="projeto-card projeto-featured" data-aos="fade-up" data-aos-delay="350">
+          <div class="featured-glow"></div>
+          <div class="projeto-bar">
+            <div class="projeto-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="projeto-tipo projeto-destaque">⭐ Destaque</span>
+          </div>
+          <div class="projeto-body">
+            <h3>E-commerce B2B</h3>
+            <p>Sistema completo de pedidos e catálogo para distribuidora com integração de gateway de pagamento, controle de estoque e gestão de clientes.</p>
+            <div class="projeto-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>AWS</span>
+            </div>
+          </div>
+          <div class="projeto-footer">
+            <a href="#contato" class="projeto-link">Ver detalhes →</a>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="projeto-bar">
+            <div class="projeto-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="projeto-tipo">API</span>
+          </div>
+          <div class="projeto-body">
+            <h3>API de Automação</h3>
+            <p>API REST para automação de processos internos com suporte a webhooks, filas de jobs e integração com sistemas legados via adapters.</p>
+            <div class="projeto-tags">
+              <span>Node.js</span>
+              <span>Docker</span>
+              <span>AWS</span>
+            </div>
+          </div>
+          <div class="projeto-footer">
+            <a href="#contato" class="projeto-link">Ver detalhes →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ DIFERENCIAIS ═══════════════════════ -->
+  <section class="diferenciais" id="diferenciais">
+    <div class="container">
+      <div class="diferenciais-inner">
+        <div class="diferenciais-text" data-aos="fade-right" data-aos-delay="100">
+          <div class="section-label">Por que eu?</div>
+          <h2 class="section-title">Diferenciais</h2>
+          <p class="section-desc">
+            Não entrego só código — entrego soluções que funcionam no mundo real, com visão de produto e responsabilidade pelo resultado.
+          </p>
+        </div>
+
+        <div class="diferenciais-list" data-aos="fade-left" data-aos-delay="200">
+          <div class="diferencial-item">
+            <div class="dif-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="dif-content">
+              <strong>Visão de produto</strong>
+              <p>Penso além do código: UX, performance, escalabilidade e o negócio por trás.</p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="dif-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="dif-content">
+              <strong>Código limpo e escalável</strong>
+              <p>Estrutura organizada, fácil de manter e preparada para crescer com o projeto.</p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="dif-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <div class="dif-content">
+              <strong>Experiência com deploy real</strong>
+              <p>Do desenvolvimento ao ar: CI/CD, Docker, cloud e produção de verdade.</p>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="dif-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <div class="dif-content">
+              <strong>Foco em solução</strong>
+              <p>Resolvo o problema do cliente — não apenas executo tarefas técnicas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROCESSO ═══════════════════════ -->
+  <section class="processo" id="processo">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Método</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Como eu trabalho</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="150">
+        Um processo claro e transparente do início ao fim, sem surpresas.
+      </p>
+
+      <div class="processo-steps">
+        <div class="processo-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-num">01</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h3>Entendimento</h3>
+            <p>Conversa sobre o projeto, objetivos, público e expectativas. Sem pressa, com escuta ativa.</p>
+          </div>
+        </div>
+
+        <div class="processo-step" data-aos="fade-up" data-aos-delay="320">
+          <div class="step-num">02</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h3>Planejamento</h3>
+            <p>Definição de escopo, arquitetura, tecnologias e cronograma realista e honesto.</p>
+          </div>
+        </div>
+
+        <div class="processo-step" data-aos="fade-up" data-aos-delay="440">
+          <div class="step-num">03</div>
+          <div class="step-line"></div>
+          <div class="step-body">
+            <h3>Desenvolvimento</h3>
+            <p>Código com qualidade, entregas parciais e comunicação constante durante o processo.</p>
+          </div>
+        </div>
+
+        <div class="processo-step" data-aos="fade-up" data-aos-delay="560">
+          <div class="step-num">04</div>
+          <div class="step-line last"></div>
+          <div class="step-body">
+            <h3>Entrega</h3>
+            <p>Deploy, documentação, testes finais e suporte pós-lançamento para garantir o sucesso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CTA FINAL ═══════════════════════ -->
+  <section class="cta-final" id="contato">
+    <div class="cta-glow cta-glow-1"></div>
+    <div class="cta-glow cta-glow-2"></div>
+    <div class="container cta-content">
+      <div class="section-label" data-aos="fade-up">Contato</div>
+      <h2 data-aos="fade-up" data-aos-delay="100">
+        Tem uma ideia ou projeto?<br />
+        <span class="gradient-text">Vamos tirar isso do papel.</span>
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Me conta o que você precisa e a gente descobre juntos qual é o melhor caminho.
+      </p>
+      <div class="cta-actions" data-aos="fade-up" data-aos-delay="320">
+        <a href="mailto:danielc10000@gmail.com" class="btn-primary btn-large">
+          <span>Falar comigo</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">daniel<span>.dev</span></a>
+        <p>Desenvolvedor Web &amp; Criador de Soluções Digitais</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:danielc10000@gmail.com">danielc10000@gmail.com</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Daniel. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
