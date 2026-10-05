@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Daniel — Software Engineer / DevOps Engineer. Backend, Cloud & Arquitetura de plataformas escaláveis." />
-  <title>Daniel | Software Engineer / DevOps Engineer</title>
+  <meta name="description" content="Daniel Correia — DevOps Engineer / Software Engineer. Cloud infrastructure on AWS, Docker, CI/CD pipelines and scalable backend systems." />
+  <title>Daniel Correia | DevOps Engineer / Software Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -197,33 +197,17 @@
       align-items: center;
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(239,68,68,.1);
-      border: 1px solid rgba(239,68,68,.25);
-      color: #f87171;
-      font-size: 12px;
+    .hero-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
       font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 28px;
+      color: var(--blue-v);
       letter-spacing: .04em;
-    }
-    .badge-pulse {
-      width: 7px; height: 7px;
-      background: #ef4444;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50%      { opacity: .6; transform: scale(.8); }
+      margin-bottom: 20px;
     }
 
     .hero-title {
-      font-size: clamp(36px, 5vw, 60px);
+      font-size: clamp(34px, 4.4vw, 50px);
       font-weight: 800;
       line-height: 1.08;
       letter-spacing: -.03em;
@@ -335,14 +319,61 @@
     .pos-item p  { font-size: 13.5px; color: var(--text-m); line-height: 1.6; }
 
     /* ── SPECIALIZATIONS ── */
-    .specs { padding: 100px 0; background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    /* ── EXPERIENCE ── */
+    .experience { padding: 100px 0; background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .exp-list { display: flex; flex-direction: column; gap: 16px; }
+    .exp-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color .2s;
+    }
+    .exp-item:hover { border-color: var(--border-h); }
+    .exp-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .exp-stack {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--blue-v);
+      margin-bottom: 16px;
+    }
+    .exp-item ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .exp-item li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: var(--text-m);
+      line-height: 1.6;
+    }
+    .exp-item li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* ── EDUCATION ── */
+    .education { padding: 100px 0; }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .edu-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue-v);
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+
+    .specs { padding: 100px 0; }
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 16px;
     }
     .spec-card {
-      background: var(--bg);
+      background: var(--bg-2);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
@@ -376,14 +407,14 @@
     }
 
     /* ── STACK ── */
-    .stack { padding: 100px 0; }
+    .stack { padding: 100px 0; background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .stack-panels {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 16px;
     }
     .stack-panel {
-      background: var(--bg-2);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 24px;
@@ -440,7 +471,7 @@
     .process-step p  { font-size: 13px; color: var(--text-m); line-height: 1.6; }
 
     /* ── DIFFERENTIALS ── */
-    .differentials { padding: 100px 0; background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .differentials { padding: 100px 0; }
     .diff-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -453,7 +484,7 @@
       gap: 16px;
       align-items: flex-start;
       padding: 20px;
-      background: var(--bg);
+      background: var(--bg-2);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       transition: border-color .2s;
@@ -477,6 +508,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      border-top: 1px solid var(--border);
     }
     .cta-final::before {
       content: '';
@@ -516,6 +548,7 @@
       .nav-links a { display: block; padding: 10px 14px; }
 
       .hero-grid, .pos-grid, .diff-grid { grid-template-columns: 1fr; gap: 40px; }
+      .edu-grid { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .specs-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: repeat(2, 1fr); }
@@ -536,10 +569,11 @@
     <div class="container nav-inner">
       <a href="#hero" class="logo">daniel<span>.engineer</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#processo">Processo</a></li>
-        <li><a href="#contato" class="btn-nav">Contato</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -553,35 +587,31 @@
 
       <!-- copy -->
       <div>
-        <div class="hero-badge" data-aos="fade-down" data-aos-delay="80">
-          <span class="badge-pulse"></span>
-          Sem disponibilidade no momento
-        </div>
+        <div class="hero-name" data-aos="fade-down" data-aos-delay="80">Daniel Correia</div>
 
         <h1 class="hero-title" data-aos="fade-up" data-aos-delay="160">
-          Engenharia<br />
-          de software e<br />
-          <span class="gradient-text">infraestrutura moderna.</span>
+          DevOps Engineer<br />
+          <span class="gradient-text">/ Software Engineer</span>
         </h1>
 
         <p class="hero-sub" data-aos="fade-up" data-aos-delay="240">
-          Construo plataformas digitais escaláveis — do backend à cloud, da arquitetura ao deploy em produção.
+          Focused on building scalable systems, cloud infrastructure and high-performance web applications — from backend to cloud, from architecture to production deploys.
         </p>
 
         <div class="hero-tags" data-aos="fade-up" data-aos-delay="320">
-          <span class="hero-tag">Backend</span>
-          <span class="hero-tag">Cloud · AWS</span>
-          <span class="hero-tag">Multi-tenant SaaS</span>
-          <span class="hero-tag">APIs &amp; WebSockets</span>
-          <span class="hero-tag">Docker · CI/CD</span>
+          <span class="hero-tag">AWS</span>
+          <span class="hero-tag">Docker</span>
+          <span class="hero-tag">CI/CD · GitHub Actions</span>
+          <span class="hero-tag">Node.js</span>
+          <span class="hero-tag">PHP 8</span>
         </div>
 
         <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-          <a href="#contato" class="btn-primary">
-            <span>Falar sobre o projeto</span>
+          <a href="#contact" class="btn-primary">
+            <span>Get in touch</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#specs" class="btn-secondary">Ver especialidades</a>
+          <a href="#experience" class="btn-secondary">View experience</a>
         </div>
       </div>
 
@@ -592,7 +622,7 @@
             <span class="t-dot t-dot-r"></span>
             <span class="t-dot t-dot-y"></span>
             <span class="t-dot t-dot-g"></span>
-            <span class="t-label">~/saas-platform — production</span>
+            <span class="t-label">~/infra — production</span>
           </div>
           <div class="terminal-body">
             <span class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">docker compose up --scale api=3 -d</span></span>
@@ -601,27 +631,27 @@
             <span class="t-line t-out t-cyan">✔ redis cache warm</span>
             <span class="t-line"> </span>
             <span class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">deploy --env production --region us-east-1</span></span>
-            <span class="t-line t-out t-dim">› Building image...   done in 12s</span>
+            <span class="t-line t-out t-dim">› Building image...   done</span>
             <span class="t-line t-out t-dim">› Pushing to ECR...   done</span>
             <span class="t-line t-out t-green">✔ ECS service updated · 0 downtime</span>
             <span class="t-line"> </span>
-            <span class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">health-check --all-tenants</span></span>
-            <span class="t-line t-out t-green">✔ 847 tenants online · p99 &lt; 80ms</span>
+            <span class="t-line"><span class="t-prompt">▶</span> <span class="t-cmd">health-check --all-services</span></span>
+            <span class="t-line t-out t-green">✔ all services healthy</span>
           </div>
         </div>
 
         <div class="hero-metrics">
           <div class="h-metric">
-            <span class="h-metric-val">847</span>
-            <div class="h-metric-lbl">Tenants ativos</div>
+            <span class="h-metric-val">AWS</span>
+            <div class="h-metric-lbl">Cloud platform</div>
           </div>
           <div class="h-metric">
-            <span class="h-metric-val">99.9%</span>
-            <div class="h-metric-lbl">Uptime</div>
+            <span class="h-metric-val">Docker</span>
+            <div class="h-metric-lbl">Containers</div>
           </div>
           <div class="h-metric">
-            <span class="h-metric-val">&lt;80ms</span>
-            <div class="h-metric-lbl">API p99</div>
+            <span class="h-metric-val">CI/CD</span>
+            <div class="h-metric-lbl">GitHub Actions</div>
           </div>
         </div>
       </div>
@@ -629,18 +659,18 @@
     </div>
   </section>
 
-  <!-- ═══════════ POSITIONING ═══════════ -->
-  <section class="positioning" id="sobre">
+  <!-- ═══════════ SUMMARY ═══════════ -->
+  <section class="positioning" id="about">
     <div class="container pos-grid">
 
       <div data-aos="fade-right">
-        <div class="section-label">Posicionamento</div>
-        <h2 class="section-title">Mais que<br />desenvolvimento web.</h2>
+        <div class="section-label">About</div>
+        <h2 class="section-title">Professional<br />Summary</h2>
         <p class="section-desc">
-          Não entrego páginas — construo sistemas. Penso arquitetura, opero cloud, automatizo infraestrutura e entrego produtos que escalam em produção real.
+          Software Engineer / DevOps Engineer with a Computer Science degree. I design the architecture, operate the cloud, automate the infrastructure and ship systems that scale in real production — not just pages.
         </p>
-        <a href="#contato" class="btn-primary">
-          <span>Iniciar conversa</span>
+        <a href="#contact" class="btn-primary">
+          <span>Contact me</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -648,31 +678,11 @@
       <div class="pos-items" data-aos="fade-left" data-aos-delay="100">
         <div class="pos-item">
           <div class="pos-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <div>
-            <h4>Arquitetura de sistemas</h4>
-            <p>Multi-tenant, RBAC, filas, WebSockets — estrutura pensada para crescer sem refatorar do zero.</p>
-          </div>
-        </div>
-
-        <div class="pos-item">
-          <div class="pos-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
           <div>
-            <h4>Cloud &amp; infraestrutura</h4>
-            <p>EC2, RDS, S3, CloudFront, ECS — infraestrutura AWS gerenciada com IaC e pipelines CI/CD.</p>
-          </div>
-        </div>
-
-        <div class="pos-item">
-          <div class="pos-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <div>
-            <h4>Produção real</h4>
-            <p>Sistemas rodando com tenants reais, monitoramento, alertas e zero-downtime deploys.</p>
+            <h4>Cloud infrastructure</h4>
+            <p>EC2, ECS, RDS/Aurora, S3, CloudFront — AWS infrastructure managed with IaC and CI/CD pipelines.</p>
           </div>
         </div>
 
@@ -681,8 +691,28 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <div>
-            <h4>Automação end-to-end</h4>
-            <p>Processos, notificações, relatórios e integrações automatizadas — sem intervenção manual.</p>
+            <h4>CI/CD &amp; automation</h4>
+            <p>GitHub Actions pipelines, container builds and end-to-end automation — no manual steps between commit and production.</p>
+          </div>
+        </div>
+
+        <div class="pos-item">
+          <div class="pos-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div>
+            <h4>Zero-downtime deployments</h4>
+            <p>Systems running in real production, released with container orchestration, monitoring and alerts.</p>
+          </div>
+        </div>
+
+        <div class="pos-item">
+          <div class="pos-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <h4>Systems architecture</h4>
+            <p>Multi-tenant, RBAC, queues, WebSockets — structure designed to grow without a rewrite.</p>
           </div>
         </div>
       </div>
@@ -690,27 +720,76 @@
     </div>
   </section>
 
-  <!-- ═══════════ SPECIALIZATIONS ═══════════ -->
-  <section class="specs" id="specs">
+  <!-- ═══════════ EXPERIENCE ═══════════ -->
+  <section class="experience" id="experience">
     <div class="container">
-      <div class="section-label" data-aos="fade-up">Especialidades</div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Core Specializations</h2>
+      <div class="section-label" data-aos="fade-up">Experience</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Professional Experience</h2>
       <p class="section-desc" data-aos="fade-up" data-aos-delay="140">
-        Áreas onde atuo com profundidade técnica e responsabilidade pelo resultado em produção.
+        Hands-on experience across infrastructure, backend and product systems, grouped by area of work.
+      </p>
+
+      <div class="exp-list">
+
+        <div class="exp-item" data-aos="fade-up" data-aos-delay="100">
+          <h3>DevOps &amp; Cloud Infrastructure</h3>
+          <div class="exp-stack">AWS · Docker · GitHub Actions · ECS</div>
+          <ul>
+            <li>Provision and operate AWS environments: EC2, ECS, RDS/Aurora, S3 + CloudFront, including networking, security and databases.</li>
+            <li>Build CI/CD pipelines with GitHub Actions — image build, push to registry and automated release to production.</li>
+            <li>Containerize applications with Docker and run them with container orchestration, automatic rollback and zero-downtime deployments.</li>
+            <li>Set up logs, alerts, performance metrics and observability to keep systems running continuously.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item" data-aos="fade-up" data-aos-delay="160">
+          <h3>Backend Engineering</h3>
+          <div class="exp-stack">Node.js · Express.js · PHP 8 · CodeIgniter 4 · Redis</div>
+          <ul>
+            <li>Design and build REST and WebSocket APIs with Node.js/Express and PHP 8/CodeIgniter 4.</li>
+            <li>Implement job queues, workers, Redis caching and JWT/OAuth authentication.</li>
+            <li>Model and operate data on MySQL, PostgreSQL, MongoDB and Redis.</li>
+            <li>Integrate payment gateways, ERPs, CRMs, WhatsApp and external services through webhooks and adapters.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item" data-aos="fade-up" data-aos-delay="220">
+          <h3>SaaS, Automation &amp; Ecommerce</h3>
+          <div class="exp-stack">Multi-tenant · RBAC · Workers · Payments</div>
+          <ul>
+            <li>Develop multi-tenant SaaS platforms with per-schema isolation, billing, granular RBAC and automated onboarding.</li>
+            <li>Automate critical processes: reports, notifications, ETLs, approval flows and legacy integrations.</li>
+            <li>Deliver B2B/B2C ecommerce solutions with dynamic catalog, inventory, orders and multiple payment gateways.</li>
+            <li>Build custom web systems and professional websites.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COMPETENCIES ═══════════ -->
+  <section class="specs" id="competencies">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Competencies</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Core Competencies</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="140">
+        Areas where I work with technical depth and take ownership of the result in production.
       </p>
 
       <div class="specs-grid">
 
         <div class="spec-card" data-aos="fade-up" data-aos-delay="100">
           <div class="spec-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
-          <h3>SaaS Platforms</h3>
-          <p>Plataformas multi-tenant com isolamento por schema, billing, RBAC granular e onboarding automatizado.</p>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>AWS infrastructure (EC2, ECS, RDS, S3, CloudFront). Docker, CI/CD pipelines and zero-downtime deployments.</p>
           <div class="spec-tags">
-            <span class="spec-tag">Multi-tenant</span>
-            <span class="spec-tag">RBAC</span>
-            <span class="spec-tag">Billing</span>
+            <span class="spec-tag">AWS</span>
+            <span class="spec-tag">Docker</span>
+            <span class="spec-tag">CI/CD</span>
+            <span class="spec-tag">ECS</span>
           </div>
         </div>
 
@@ -719,7 +798,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
           <h3>Backend Architecture</h3>
-          <p>APIs REST e WebSocket com Node.js e PHP/CI4. Filas de jobs, workers, cache Redis e autenticação JWT/OAuth.</p>
+          <p>REST and WebSocket APIs with Node.js and PHP/CI4. Job queues, workers, Redis cache and JWT/OAuth authentication.</p>
           <div class="spec-tags">
             <span class="spec-tag">Node.js</span>
             <span class="spec-tag">PHP/CI4</span>
@@ -730,24 +809,10 @@
 
         <div class="spec-card" data-aos="fade-up" data-aos-delay="220">
           <div class="spec-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <h3>Cloud &amp; DevOps</h3>
-          <p>Infraestrutura AWS (EC2, ECS, RDS, S3, CloudFront). Docker, CI/CD pipelines e zero-downtime deploys.</p>
-          <div class="spec-tags">
-            <span class="spec-tag">AWS</span>
-            <span class="spec-tag">Docker</span>
-            <span class="spec-tag">CI/CD</span>
-            <span class="spec-tag">ECS</span>
-          </div>
-        </div>
-
-        <div class="spec-card" data-aos="fade-up" data-aos-delay="280">
-          <div class="spec-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
           </div>
           <h3>APIs &amp; Integrations</h3>
-          <p>Integrações com gateways de pagamento, ERPs, CRMs, WhatsApp e serviços externos via webhooks e adapters.</p>
+          <p>Integrations with payment gateways, ERPs, CRMs, WhatsApp and external services through webhooks and adapters.</p>
           <div class="spec-tags">
             <span class="spec-tag">REST</span>
             <span class="spec-tag">Webhooks</span>
@@ -755,38 +820,12 @@
           </div>
         </div>
 
-        <div class="spec-card" data-aos="fade-up" data-aos-delay="340">
-          <div class="spec-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          </div>
-          <h3>Ecommerce Systems</h3>
-          <p>Plataformas B2B/B2C com catálogo dinâmico, gestão de estoque, pedidos e múltiplos gateways de pagamento.</p>
-          <div class="spec-tags">
-            <span class="spec-tag">B2B</span>
-            <span class="spec-tag">Payments</span>
-            <span class="spec-tag">Inventory</span>
-          </div>
-        </div>
-
-        <div class="spec-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="spec-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h3>Mobile Applications</h3>
-          <p>Apps React Native integrados a plataformas SaaS existentes, com notificações, autenticação e sincronização em tempo real.</p>
-          <div class="spec-tags">
-            <span class="spec-tag">React Native</span>
-            <span class="spec-tag">Push</span>
-            <span class="spec-tag">Realtime</span>
-          </div>
-        </div>
-
-        <div class="spec-card" data-aos="fade-up" data-aos-delay="460">
+        <div class="spec-card" data-aos="fade-up" data-aos-delay="280">
           <div class="spec-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <h3>Automation Systems</h3>
-          <p>Automações de processos críticos: relatórios, notificações, ETLs, fluxos de aprovação e integrações legadas.</p>
+          <p>Automation of critical processes: reports, notifications, ETLs, approval flows and legacy integrations.</p>
           <div class="spec-tags">
             <span class="spec-tag">Workers</span>
             <span class="spec-tag">ETL</span>
@@ -794,28 +833,67 @@
           </div>
         </div>
 
+        <div class="spec-card" data-aos="fade-up" data-aos-delay="340">
+          <div class="spec-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>SaaS Platforms</h3>
+          <p>Multi-tenant platforms with per-schema isolation, billing, granular RBAC and automated onboarding.</p>
+          <div class="spec-tags">
+            <span class="spec-tag">Multi-tenant</span>
+            <span class="spec-tag">RBAC</span>
+            <span class="spec-tag">Billing</span>
+          </div>
+        </div>
+
+        <div class="spec-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="spec-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+          <h3>Ecommerce Systems</h3>
+          <p>B2B/B2C platforms with dynamic catalog, inventory management, orders and multiple payment gateways.</p>
+          <div class="spec-tags">
+            <span class="spec-tag">B2B</span>
+            <span class="spec-tag">Payments</span>
+            <span class="spec-tag">Inventory</span>
+          </div>
+        </div>
+
+        <div class="spec-card" data-aos="fade-up" data-aos-delay="460">
+          <div class="spec-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>Mobile Applications</h3>
+          <p>React Native apps integrated with existing SaaS platforms, with notifications, authentication and real-time sync.</p>
+          <div class="spec-tags">
+            <span class="spec-tag">React Native</span>
+            <span class="spec-tag">Push</span>
+            <span class="spec-tag">Realtime</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ STACK ═══════════ -->
-  <section class="stack" id="stack">
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section class="stack" id="skills">
     <div class="container">
-      <div class="section-label" data-aos="fade-up">Tecnologia</div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Technology Stack</h2>
+      <div class="section-label" data-aos="fade-up">Skills</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Technical Skills</h2>
       <p class="section-desc" data-aos="fade-up" data-aos-delay="140">
-        Stack profissional para construir plataformas SaaS robustas do backend à infraestrutura.
+        The stack I use to build and operate robust systems, from infrastructure to backend.
       </p>
 
       <div class="stack-panels">
 
         <div class="stack-panel" data-aos="fade-up" data-aos-delay="100">
-          <div class="stack-panel-title">Backend</div>
+          <div class="stack-panel-title">DevOps</div>
           <div class="stack-items">
-            <div class="stack-item"><span class="stack-dot"></span><span>Node.js</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>PHP 8</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>CodeIgniter 4</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>Express.js</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>CI/CD Pipelines</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>GitHub Actions</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>Container Orchestration</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>Zero-downtime Deploy</span></div>
           </div>
         </div>
 
@@ -830,6 +908,16 @@
         </div>
 
         <div class="stack-panel" data-aos="fade-up" data-aos-delay="220">
+          <div class="stack-panel-title">Backend</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot"></span><span>Node.js</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>Express.js</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>PHP 8</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>CodeIgniter 4</span></div>
+          </div>
+        </div>
+
+        <div class="stack-panel" data-aos="fade-up" data-aos-delay="280">
           <div class="stack-panel-title">Data</div>
           <div class="stack-items">
             <div class="stack-item"><span class="stack-dot"></span><span>MySQL</span></div>
@@ -839,7 +927,7 @@
           </div>
         </div>
 
-        <div class="stack-panel" data-aos="fade-up" data-aos-delay="280">
+        <div class="stack-panel" data-aos="fade-up" data-aos-delay="340">
           <div class="stack-panel-title">Architecture</div>
           <div class="stack-items">
             <div class="stack-item"><span class="stack-dot"></span><span>Multi-tenant</span></div>
@@ -849,22 +937,13 @@
           </div>
         </div>
 
-        <div class="stack-panel" data-aos="fade-up" data-aos-delay="340">
-          <div class="stack-panel-title">Mobile</div>
-          <div class="stack-items">
-            <div class="stack-item"><span class="stack-dot"></span><span>React Native</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>Push Notifications</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>Realtime sync</span></div>
-          </div>
-        </div>
-
         <div class="stack-panel" data-aos="fade-up" data-aos-delay="400">
-          <div class="stack-panel-title">DevOps</div>
+          <div class="stack-panel-title">Currently Learning</div>
           <div class="stack-items">
-            <div class="stack-item"><span class="stack-dot"></span><span>CI/CD Pipelines</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>GitHub Actions</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>Container Orchestration</span></div>
-            <div class="stack-item"><span class="stack-dot"></span><span>Zero-downtime Deploy</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>React</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>React Native</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>Advanced backend architecture</span></div>
+            <div class="stack-item"><span class="stack-dot"></span><span>DevOps practices</span></div>
           </div>
         </div>
 
@@ -872,59 +951,93 @@
     </div>
   </section>
 
-  <!-- ═══════════ PROCESS ═══════════ -->
-  <section class="process" id="processo">
+  <!-- ═══════════ EDUCATION ═══════════ -->
+  <section class="education" id="education">
     <div class="container">
-      <div class="section-label" data-aos="fade-up">Método</div>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Engineering Process</h2>
+      <div class="section-label" data-aos="fade-up">Education</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Education</h2>
       <p class="section-desc" data-aos="fade-up" data-aos-delay="140">
-        Da discovery ao monitoramento em produção — um processo que garante qualidade, escalabilidade e operação contínua.
+        Academic background in Computer Science, with an international exchange in Computer Engineering.
+      </p>
+
+      <div class="edu-grid">
+        <div class="diff-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="diff-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg>
+          </div>
+          <div>
+            <div class="edu-year">2010 — 2014</div>
+            <h4>Bachelor's Degree in Computer Science</h4>
+            <p>IFSULDEMINAS</p>
+          </div>
+        </div>
+        <div class="diff-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="diff-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+          </div>
+          <div>
+            <div class="edu-year">2013</div>
+            <h4>Exchange Program — Computer Engineering</h4>
+            <p>IPLeiria, Portugal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROCESS ═══════════ -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Method</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">How I Work</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="140">
+        From discovery to production monitoring — the way I work inside a team to ensure quality, scalability and continuous operation.
       </p>
 
       <div class="process-steps">
         <div class="process-step" data-aos="fade-up" data-aos-delay="100">
           <div class="step-num">01 · DISCOVERY</div>
           <h3>Discovery</h3>
-          <p>Mapeamento do negócio, fluxos críticos, restrições técnicas e definição de escopo realista.</p>
+          <p>Mapping the business, critical flows and technical constraints, and defining a realistic scope.</p>
         </div>
         <div class="process-step" data-aos="fade-up" data-aos-delay="160">
           <div class="step-num">02 · ARCHITECTURE</div>
           <h3>Architecture</h3>
-          <p>Modelagem de dados, definição de stack, decisões de escalabilidade e segurança desde o início.</p>
+          <p>Data modeling, stack definition, and scalability and security decisions from the start.</p>
         </div>
         <div class="process-step" data-aos="fade-up" data-aos-delay="220">
           <div class="step-num">03 · DEVELOPMENT</div>
           <h3>Development</h3>
-          <p>Desenvolvimento iterativo com entregas parciais, code review e comunicação contínua.</p>
+          <p>Iterative development with incremental deliveries, code review and continuous communication.</p>
         </div>
         <div class="process-step" data-aos="fade-up" data-aos-delay="280">
           <div class="step-num">04 · INFRASTRUCTURE</div>
           <h3>Infrastructure</h3>
-          <p>Provisionamento de ambiente cloud, configuração de rede, segurança e banco de dados.</p>
+          <p>Provisioning the cloud environment and configuring networking, security and databases.</p>
         </div>
         <div class="process-step" data-aos="fade-up" data-aos-delay="340">
           <div class="step-num">05 · DEPLOYMENT</div>
           <h3>Deployment</h3>
-          <p>CI/CD configurado, Docker, rollback automático e deploy sem downtime para produção.</p>
+          <p>CI/CD in place, Docker, automatic rollback and zero-downtime deploys to production.</p>
         </div>
         <div class="process-step" data-aos="fade-up" data-aos-delay="400">
           <div class="step-num">06 · MONITORING</div>
           <h3>Monitoring</h3>
-          <p>Logs, alertas, métricas de performance e observabilidade para garantir operação contínua.</p>
+          <p>Logs, alerts, performance metrics and observability to ensure continuous operation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ DIFFERENTIALS ═══════════ -->
-  <section class="differentials" id="diferenciais">
+  <!-- ═══════════ STRENGTHS ═══════════ -->
+  <section class="differentials" id="strengths">
     <div class="container diff-grid">
 
       <div data-aos="fade-right">
-        <div class="section-label">Diferenciais</div>
-        <h2 class="section-title">Por que trabalhar<br />comigo?</h2>
+        <div class="section-label">Strengths</div>
+        <h2 class="section-title">What I bring<br />to a team.</h2>
         <p class="section-desc">
-          Não executo tarefas — resolvo problemas de produto. Cada decisão técnica considera escalabilidade, custo operacional e longevidade do sistema.
+          I don't just execute tasks — I solve problems. Every technical decision weighs scalability, operational cost and the longevity of the system.
         </p>
       </div>
 
@@ -934,8 +1047,8 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
           <div>
-            <h4>Visão arquitetural</h4>
-            <p>Decisões de design que evitam refatorações caras 6 meses depois.</p>
+            <h4>Architectural vision</h4>
+            <p>Design decisions that avoid expensive refactors six months later.</p>
           </div>
         </div>
         <div class="diff-item">
@@ -943,8 +1056,8 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
           </div>
           <div>
-            <h4>Produção real</h4>
-            <p>Experiência com sistemas rodando 24/7 com tenants pagantes e SLA real.</p>
+            <h4>Real production</h4>
+            <p>Experience with systems running 24/7 for real customers.</p>
           </div>
         </div>
         <div class="diff-item">
@@ -952,8 +1065,8 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           </div>
           <div>
-            <h4>Escalabilidade desde o início</h4>
-            <p>Estrutura preparada para crescer sem reescrever — multi-tenant, cache, filas desde a v1.</p>
+            <h4>Scalability from day one</h4>
+            <p>Structure ready to grow without a rewrite — multi-tenant, cache and queues from v1.</p>
           </div>
         </div>
         <div class="diff-item">
@@ -961,8 +1074,8 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <h4>Segurança &amp; compliance</h4>
-            <p>Autenticação, autorização, isolamento de dados e auditoria integrados ao design do sistema.</p>
+            <h4>Security &amp; compliance</h4>
+            <p>Authentication, authorization, data isolation and auditing built into the system design.</p>
           </div>
         </div>
       </div>
@@ -970,20 +1083,20 @@
     </div>
   </section>
 
-  <!-- ═══════════ CTA FINAL ═══════════ -->
-  <section class="cta-final" id="contato">
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="cta-final" id="contact">
     <div class="container">
-      <div class="section-label" data-aos="fade-up" style="justify-content:center">Contato</div>
+      <div class="section-label" data-aos="fade-up" style="justify-content:center">Contact</div>
       <h2 data-aos="fade-up" data-aos-delay="80">
-        Pronto para construir<br />
-        <span class="gradient-text">sua próxima plataforma?</span>
+        Looking for a DevOps Engineer?<br />
+        <span class="gradient-text">Let's talk.</span>
       </h2>
       <p data-aos="fade-up" data-aos-delay="160">
-        Conte o que você precisa construir. Em uma conversa técnica, a gente define arquitetura, stack e próximos passos.
+        If your team needs someone to own cloud infrastructure, pipelines and backend systems, send me a message.
       </p>
       <div class="cta-actions" data-aos="fade-up" data-aos-delay="260">
         <a href="mailto:danielc10000@gmail.com" class="btn-primary btn-large">
-          <span>Iniciar conversa</span>
+          <span>Email me</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="https://github.com/daniel-2010" target="_blank" rel="noopener" class="btn-secondary btn-large">GitHub</a>
@@ -996,7 +1109,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#hero" class="logo">daniel<span>.engineer</span></a>
-        <p>Software Engineer / DevOps Engineer · Backend &amp; Cloud Specialist</p>
+        <p>DevOps Engineer / Software Engineer · Cloud &amp; Backend</p>
       </div>
       <div class="footer-links">
         <a href="mailto:danielc10000@gmail.com">danielc10000@gmail.com</a>
@@ -1005,7 +1118,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2025 Daniel. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Daniel Correia. All rights reserved.</p>
       </div>
     </div>
   </footer>
